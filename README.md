@@ -7,8 +7,8 @@
 
 ## Coursework 1: Sensing 
 
-The `Data Collection/` directory contains all the data collected as part of Coursework 1. This includes the Google Sheet and the CSVs. 
-The `RaspPi/` directory contains the files run on the Raspberry Pi.
+The `Data collection/` directory contains all the data collected as part of Coursework 1. This includes the Google Sheet and the CSVs. 
+The `RaspPi files/` directory contains the files run on the Raspberry Pi.
 
 ## Coursework 2: Internet of Things
 
