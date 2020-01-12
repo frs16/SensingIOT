@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+	<style>
+	p.ex1 {
+    padding: 0px 35px 10px 35px;
+	}
+	h1.ex2 {
+    padding: 30px 35px 0px 35px;
+	}
+	h2.ex3 {
+    padding: 20px 35px 0px 35px;
+	}
+	iframe.ex4 {
+    padding: 10px 35px 10px 35px;
+	}
+	body {
+  	padding: 0;
+  	margin: 0;
+  	background: #f2f6e9;
+    }
+	/*--- navigation bar ---*/
+	.navbar {
+  	background:#b3b3ff;
+	}
+	.nav-link,
+	.navbar-brand {
+  	color: #fff;
+  	cursor: pointer;
+	}
+	.nav-link {
+  	margin-right: 1em !important;
+	}
+	.nav-link:hover {
+  	color: #000;
+	}
+	.navbar-collapse {
+  	justify-content: flex-end;
+	}
+	</style>
+	
+    <title>Frankie's SIOT Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<! link rel="stylesheet" href="users/francescasuer/microblog/app/templates/main.css">
+	
+  </head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md">
+  	<a class="navbar-brand" href="/">LightJourney</a>
+  	<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    	<span class="navbar-toggler-icon"></span>
+  	</button>
+  	<div class="collapse navbar-collapse" id="main-navigation">
+    	<ul class="navbar-nav">
+      		<li class="nav-item">
+      	 		 <a class="nav-link" href="/">About</a>
+      		</li>
+      		<li class="nav-item">
+       			 <a class="nav-link" href="/dataanalysis">Data Analysis</a>
+      		</li>
+      		<li class="nav-item">
+        		<a class="nav-link" href="/prediction">Prediction</a>
+    	  	</li>
+    	</ul>
+	  </div>
+	</nav>
+
+<h1 class="ex2">Prediction</h1>
+
+<h2 class="ex3">Date & Time based prediction</h2>
+<p class="ex1">What time are you planning on travelling to Imperial College London? Pick a time and a date here and we can tell you if it's a busy time of day to travel or not.</p>
+
+      <form action = "http://localhost:5000/result" method = "POST">
+
+         <p class="ex1">Time <input type = "text" id="time" name = "Time"/></p>
+
+             <title>jQuery UI Datepicker - Default functionality</title>
+             <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+             <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            
+             <script>
+             $( function() {
+             $( "#datepicker" ).datepicker();
+              } );
+             </script>
+
+         <p class="ex1">Date <input type = "date" id = "datepicker" name = "Date"/></p>
+         <p class="ex1"><input type = "submit" value = "submit" /></p>
+      </form>
+      
+<h2 class="ex3">Light level based prediction</h2>     
+<p class="ex1">Input the current light level in lux and we can predict your journey time via bus. </p>
+
+      <form action = "http://localhost:5000/resultlight" method = "POST">
+
+         <p class="ex1">Lux <input type = "number" id="lux" name = "Lux"/></p>
+         <p class="ex1"><input type = "submit" value = "submit" /></p>
+      </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</body>
+</html>

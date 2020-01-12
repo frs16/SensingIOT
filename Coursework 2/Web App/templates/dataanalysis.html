@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+	<style>
+	p.ex1 {
+    padding: 0px 35px 10px 35px;
+	}
+	h1.ex2 {
+    padding: 30px 35px 0px 35px;
+	}
+	h2.ex3 {
+    padding: 25px 35px 0px 35px;
+	}
+	iframe.ex4 {
+    padding: 10px 35px 10px 35px;
+	}
+	body {
+  	padding: 0;
+  	margin: 0;
+  	background: #f2f6e9;
+    }
+	/*--- navigation bar ---*/
+	.navbar {
+  	background:#b3b3ff;
+	}
+	.nav-link,
+	.navbar-brand {
+  	color: #fff;
+  	cursor: pointer;
+	}
+	.nav-link {
+  	margin-right: 1em !important;
+	}
+	.nav-link:hover {
+  	color: #000;
+	}
+	.navbar-collapse {
+  	justify-content: flex-end;
+	}
+	</style>
+	
+    <title>Frankie's SIOT Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<! link rel="stylesheet" href="users/francescasuer/microblog/app/templates/main.css">
+	
+  </head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md">
+  	<a class="navbar-brand" href="/">LightJourney</a>
+  	<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    	<span class="navbar-toggler-icon"></span>
+  	</button>
+  	<div class="collapse navbar-collapse" id="main-navigation">
+    	<ul class="navbar-nav">
+      		<li class="nav-item">
+      	 		 <a class="nav-link" href="/">About</a>
+      		</li>
+      		<li class="nav-item">
+       			 <a class="nav-link" href="/dataanalysis">Data Analysis</a>
+      		</li>
+      		<li class="nav-item">
+        		<a class="nav-link" href="/prediction">Prediction</a>
+    	  	</li>
+    	</ul>
+	  </div>
+	</nav>
+
+<h1 class="ex2">Data Analysis</h1>
+<h2 class="ex3">The Raw Data Collected</h2>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/6/"></iframe>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/10/"></iframe>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/12/"></iframe>
+
+<h2 class="ex3">The Datasets together</h2>
+<p class="ex1">The plot below shows all the datasets normalised so that they can be compared against each other and are resampled to hour bins.</p>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/20/"></iframe>
+
+<h2 class="ex3">Seasonality, Trends and Noise</h2>
+<p class="ex1">Here, the time series datasets have been broken down into their components: seasonality, trend and noise. Seasonality refers to a repeating short term cycle in a time series, trend refers to a long term increase or decrease in a dataset over time and noise refers to random variation in the time series .</p>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/45/"></iframe>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/47/"></iframe>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/49/"></iframe>
+
+<h2 class="ex3">Autocorrelation</h2>
+<p class="ex1">Autocorrelation is the correlation of a signal with a delayed copy of itself as a function of the time lag between them. The plots below shows that light intensity, journey duration via car and bus are all highly correlated every 24 hours.</p>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/62/"></iframe>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/64/"></iframe>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/72/"></iframe>
+
+
+<h2 class="ex3">Predictive Model</h2>
+<p class="ex1">A predictive model was built that is able to predict journey duration via bus based on the current light intensity. The model was built using a recurrent neural network (RNN) which is a class of artificial neural networks (ANN) designed to recognise sequential characteristics of a dataset in order to predict future scenarios based on past scenarios. The model was trained on 90% of the dataset and tested on the last 10%. The plot below shows the predictive model predicting the last 10% of the dataset (journey duration via bus) as compared to the true data.</p>
+<iframe class="ex3" width="1000" height="550" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~frsuer/67/"></iframe>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</body>
+</html>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+	<style>
+
+	h1.ex2 {
+    padding: 50px 35px 0px 35px;
+	}
+	h2.ex3 {
+    padding: 20px 35px 0px 35px;
+	}
+	iframe.ex4 {
+    padding: 10px 35px 10px 35px;
+	}
+	body {
+  	padding: 0;
+  	margin: 0;
+  	background: #f2f6e9;
+    }
+
+	/*--- navigation bar ---*/
+	.navbar {
+  	background:#b3b3ff;
+	}
+	.nav-link,
+	.navbar-brand {
+  	color: #fff;
+  	cursor: pointer;
+	}
+	.nav-link {
+  	margin-right: 1em !important;
+	}
+	.nav-link:hover {
+  	color: #000;
+	}
+	.navbar-collapse {
+  	justify-content: flex-end;
+	}
+	</style>
+	
+    <title>Frankie's SIOT Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<! link rel="stylesheet" href="users/francescasuer/microblog/app/templates/main.css">
+	
+  </head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md">
+  	<a class="navbar-brand" href="/">LightJourney</a>
+  	<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    	<span class="navbar-toggler-icon"></span>
+  	</button>
+  	<div class="collapse navbar-collapse" id="main-navigation">
+    	<ul class="navbar-nav">
+      		<li class="nav-item">
+      	 		 <a class="nav-link" href="/">About</a>
+      		</li>
+      		<li class="nav-item">
+       			 <a class="nav-link" href="/dataanalysis">Data Analysis</a>
+      		</li>
+      		<li class="nav-item">
+        		<a class="nav-link" href="/prediction">Prediction</a>
+
+    	</ul>
+	  </div>
+	</nav>
+<h1 class="ex2">About</h1>
+
+<h2 class="ex3">The Project</h2>
+<p style="padding:  0px 35px 0px 35px">LightJourney is a WebApp that's able to help commuters make better decisions about when to travel. Light level and journey duration via bus and car were correlated to be able to predict the best time to travel and avoid traffic. </p>
+<p style="padding:  0px 35px 10px 35px">This project was set-up in my home located in West London, Hammersmith.  I was interested to investigate the journey I make almost every day from my home into university, Imperial College London. By collecting the journey time between the two locations and the associated light level at that time of day I was able to draw conclusions, patterns and insights.</p>
+<p style="padding:  0px 35px 0px 35px">Light intensity was collected with a BH1750 light sensor and journey duration via car and bus were collected from TomTom's routing API both at a frequency of two minutes over a week. </p>
+
+<h2 class="ex3">WebApp Design</h2>
+<p style="padding:  0px 35px 0px 35px">The WebApp is structured as follows:<br/>About: About the WebApp<br/>Data Analysis: A collection of interactive graphs displaying dataset analysis including patterns, trends, correlations, predictive models and insights<br/>Prediction: Able to predict good and bad times to travel and avoid traffic based on WebApp user date and time input.</p>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</body>
+</html>
